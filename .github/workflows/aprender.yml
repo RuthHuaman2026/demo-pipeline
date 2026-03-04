@@ -1,0 +1,9 @@
+name: Mi Pipeline de Prueba
+on: [push] # Se activa cada vez que subes algo
+
+jobs:
+  saludo:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Decir hola
+        run: echo "¡Felicidades! Tu carpeta .github/workflows funciona perfectamente."
