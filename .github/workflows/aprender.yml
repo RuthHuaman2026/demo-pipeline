@@ -1,22 +1,22 @@
 name: Mi Primer Pipeline
 on:
   push:
-    [cite_start]branches: [ "main" ] # Se ejecuta en la rama principal [cite: 154]
+    branches: [ "main" ]
 
 jobs:
   build-and-test:
-    [cite_start]runs-on: ubuntu-latest # Corregido: era 'latest', no 'lastest' [cite: 157, 158]
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout code
-        [cite_start]uses: actions/checkout@v4 # Acción para descargar el repo [cite: 162, 163]
+        uses: actions/checkout@v4
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          [cite_start]node-version: 18 # Versión recomendada [cite: 171, 172]
+          node-version: 18
 
       - name: Install Dependencies
-        [cite_start]run: npm install # Comando para instalar desde package.json [cite: 173, 174]
+        run: npm install
 
       - name: Run Tests
-        [cite_start]run: npm test # Comando que ejecuta las pruebas [cite: 179, 181]
+        run: npm test
