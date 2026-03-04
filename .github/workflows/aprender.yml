@@ -5,7 +5,7 @@ on:
 
 jobs:
   build-and-test:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-latest # Corregido: sin la "s" extra
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
